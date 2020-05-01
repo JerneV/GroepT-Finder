@@ -1,0 +1,154 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Main.settingsActivity">
+
+    <EditText
+        android:id="@+id/description"
+        android:layout_width="0dp"
+        android:layout_height="50dp"
+        android:layout_marginTop="60dp"
+        android:ems="10"
+        android:hint="Description"
+        android:inputType="textPersonName"
+        app:layout_constraintEnd_toEndOf="@+id/dispNameText"
+        app:layout_constraintStart_toStartOf="@+id/dispNameText"
+        app:layout_constraintTop_toBottomOf="@+id/dispNameText" />
+
+    <TextView
+        android:id="@+id/dispName4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:hint="@string/nav_app_bar_navigate_up_description"
+        android:text="Describe yourself :)"
+        app:layout_constraintBottom_toTopOf="@+id/description"
+        app:layout_constraintStart_toStartOf="@+id/description" />
+
+    <Button
+        android:id="@+id/changeAll"
+        android:layout_width="133dp"
+        android:layout_height="0dp"
+        android:backgroundTint="#B2FFFFFF"
+        android:onClick="on_Change"
+        android:text="Change"
+        app:layout_constraintBottom_toBottomOf="@+id/backButton"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/backButton" />
+
+    <EditText
+        android:id="@+id/dispNameText"
+        android:layout_width="327dp"
+        android:layout_height="49dp"
+        android:layout_marginStart="50dp"
+        android:layout_marginTop="140dp"
+        android:ems="10"
+        android:hint="Display name"
+        android:inputType="textPersonName"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/dispName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Change display name"
+        app:layout_constraintBottom_toTopOf="@+id/dispNameText"
+        app:layout_constraintStart_toStartOf="@+id/dispNameText" />
+
+    <Spinner
+        android:id="@+id/spinnerFase"
+        android:layout_width="0dp"
+        android:layout_height="40dp"
+        android:layout_marginTop="60dp"
+        android:entries="@array/fases"
+        app:layout_constraintEnd_toEndOf="@+id/description"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/description"
+        app:layout_constraintTop_toBottomOf="@+id/description" />
+
+    <Spinner
+        android:id="@+id/spinnerSpecial"
+        android:layout_width="0dp"
+        android:layout_height="40dp"
+        android:layout_marginTop="60dp"
+        android:entries="@array/specialization"
+        app:layout_constraintEnd_toEndOf="@+id/spinnerFase"
+        app:layout_constraintStart_toStartOf="@+id/spinnerFase"
+        app:layout_constraintTop_toBottomOf="@+id/spinnerFase" />
+
+    <TextView
+        android:id="@+id/textView4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Select phase please"
+        app:layout_constraintBottom_toTopOf="@+id/spinnerFase"
+        app:layout_constraintStart_toStartOf="@+id/spinnerFase" />
+
+    <TextView
+        android:id="@+id/textView5"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Specialization (2nd y's and above)"
+        app:layout_constraintBottom_toTopOf="@+id/spinnerSpecial"
+        app:layout_constraintStart_toStartOf="@+id/spinnerSpecial" />
+
+    <ImageView
+        android:id="@+id/imageView4"
+        android:layout_width="0dp"
+        android:layout_height="71dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/side_nav_bar" />
+
+    <ImageButton
+        android:id="@+id/backButton"
+        android:layout_width="64dp"
+        android:layout_height="54dp"
+        android:layout_marginStart="20dp"
+        android:backgroundTint="#B2FFFFFF"
+        android:onClick="onBtnback_Clicked"
+        android:tint="#006064"
+        app:layout_constraintBottom_toBottomOf="@+id/imageView4"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/imageView4"
+        app:srcCompat="?attr/homeAsUpIndicator" />
+
+    <TextView
+
+        android:id="@+id/textView1"
+
+        android:layout_width="wrap_content"
+
+        android:layout_height="wrap_content"
+
+        android:padding="5dip"
+        android:text="Select extra courses"
+        app:layout_constraintBottom_toTopOf="@+id/selectCourses"
+        app:layout_constraintStart_toStartOf="@+id/selectCourses" />
+
+    <Button
+
+        android:id="@+id/selectCourses"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="50dp"
+        android:layout_marginTop="60dp"
+        android:layout_marginEnd="50dp"
+        android:background="#00FFFFFF"
+        android:backgroundTint="#00FFFFFF"
+        android:gravity="left|center_vertical"
+        android:onClick="onClickBigSpin"
+        android:padding="5dip"
+        android:text="- None Selected -"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/spinnerSpecial" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
